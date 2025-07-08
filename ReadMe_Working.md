@@ -20,9 +20,14 @@ conda activate lyra
 Install core and required packages:
 ```bash
 pip install --upgrade pip
-pip install torch==2.1.2 torchvision==0.16.2 transformers==4.45.0 tokenizers==0.20.0 sentencepiece==0.1.99 shortuuid accelerate==0.34.0 peft bitsandbytes pydantic markdown2[all] numpy scikit-learn==1.2.2 gradio==4.16.0 gradio_client==0.8.1 requests httpx==0.24.0 uvicorn fastapi==0.115.6 einops==0.6.1 einops-exts==0.0.4 timm==0.9.16 soundfile torchaudio==2.1.2 deepspeed==0.14.4 ninja wandb qwen_vl_utils openai-whisper ftfy numba jiwer moviepy
-pip install flash-attn==2.6.3 --no-build-isolation --no-cache-dir
+pip install -r requirements.txt
 ```
+
+**Note:**
+- `flash-attn` must be installed separately due to special build flags:
+    ```bash
+    pip install flash-attn==2.6.3 --no-build-isolation --no-cache-dir
+    ```
 
 ## 4. Install Git LFS (for model weights)
 ```bash
